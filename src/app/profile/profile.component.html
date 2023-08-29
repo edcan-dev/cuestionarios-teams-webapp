@@ -1,6 +1,15 @@
-<div>
-  <p><strong>First Name: </strong> {{profile.givenName}}</p>
-  <p><strong>Last Name: </strong> {{profile.surname}}</p>
-  <p><strong>Email: </strong> {{profile.userPrincipalName}}</p>
-  <p><strong>Id: </strong> {{profile.id}}</p>
+<div class="w-100 bg-dark p-5 my-5">
+
+  <div class="card mt-5 m-auto " style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ profile.givenName }}</h5>
+      <h5 class="card-title">{{ profile.surname }}</h5>
+      <p class="card-text">{{ profile.userPrincipalName }}</p>
+      <p class="card-text">{{ profile.officeLocation }}</p>
+    </div>
+  </div>
+
 </div>
+
+

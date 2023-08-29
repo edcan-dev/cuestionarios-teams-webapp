@@ -7,7 +7,8 @@ type ProfileType = {
   givenName?: string,
   surname?: string,
   userPrincipalName?: string,
-  id?: string
+  id?: string,
+  officeLocation?: string
 };
 
 @Component({

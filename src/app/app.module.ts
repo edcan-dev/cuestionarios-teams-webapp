@@ -23,17 +23,20 @@ import {
   PublicClientApplication,
 } from "@azure/msal-browser";
 
+console.log("asu")
+
+const dev = true;
+export const redirectUrl = dev ?
+"http://localhost:4200" :
+"https://orange-water-0d503ef10.3.azurestaticapps.net";
+
 const isIE =
   window.navigator.userAgent.indexOf("MSIE ") > -1 ||
   window.navigator.userAgent.indexOf("Trident/") > -1;
 
-const dev = false;
+console.log(window.navigator.userAgent)
 
-export const REDIRECT_URL = dev
-  ? 'http://localhost:4200'
-  : 'https://orange-water-0d503ef10.3.azurestaticapps.net';
-  
-
+  // 'https://orange-water-0d503ef10.3.azurestaticapps.net'
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ProfileComponent],
@@ -51,7 +54,7 @@ export const REDIRECT_URL = dev
           clientId: "db56d95a-515a-4e76-8e7b-c06eeff1aeec",
           authority:
             "https://login.microsoftonline.com/489581cf-0f55-408a-9e44-289b6fb55ea0",
-          redirectUri: REDIRECT_URL,
+          redirectUri: redirectUrl
         },
         cache: {
           cacheLocation: "localStorage",
