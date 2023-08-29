@@ -27,6 +27,14 @@ const isIE =
   window.navigator.userAgent.indexOf("MSIE ") > -1 ||
   window.navigator.userAgent.indexOf("Trident/") > -1;
 
+const dev = false;
+
+export const REDIRECT_URL = dev
+  ? 'http://localhost:4200'
+  : 'https://orange-water-0d503ef10.3.azurestaticapps.net';
+  
+
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, ProfileComponent],
   imports: [
@@ -43,7 +51,7 @@ const isIE =
           clientId: "db56d95a-515a-4e76-8e7b-c06eeff1aeec",
           authority:
             "https://login.microsoftonline.com/489581cf-0f55-408a-9e44-289b6fb55ea0",
-          redirectUri: "http://localhost:4200",
+          redirectUri: REDIRECT_URL,
         },
         cache: {
           cacheLocation: "localStorage",
