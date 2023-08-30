@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "s-teams-webapp": {
+    "dual-quiz-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/s-teams-webapp",
+            "outputPath": "dist/dual-quiz-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "s-teams-webapp:build:production"
+              "browserTarget": "dual-quiz-app:build:production"
             },
             "development": {
-              "browserTarget": "s-teams-webapp:build:development"
+              "browserTarget": "dual-quiz-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "s-teams-webapp:build"
+            "browserTarget": "dual-quiz-app:build"
           }
         },
         "test": {
