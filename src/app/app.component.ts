@@ -21,7 +21,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.isIframe = window !== window.parent && !window.opener;
-
     this.broadcastService.inProgress$
     .pipe(
       filter((status: InteractionStatus) => status === InteractionStatus.None),

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cuestionarios-teams-webapp": {
+    "s-teams-webapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cuestionarios-teams-webapp",
+            "outputPath": "dist/s-teams-webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "cuestionarios-teams-webapp:build:production"
+              "browserTarget": "s-teams-webapp:build:production"
             },
             "development": {
-              "browserTarget": "cuestionarios-teams-webapp:build:development"
+              "browserTarget": "s-teams-webapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cuestionarios-teams-webapp:build"
+            "browserTarget": "s-teams-webapp:build"
           }
         },
         "test": {

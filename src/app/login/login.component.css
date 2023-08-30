@@ -1,0 +1,105 @@
+* {
+  font-family: 'Secular One', sans-serif;
+}
+
+
+/* MAIN CONTAINER */
+.login-main-container {
+  position: fixed;
+  height: 100vh;
+  background-color: #024059;  
+}
+
+.login-logo-container {
+  display: flex;
+  width: 100vw;
+  margin:0px 0px;
+  padding: 30px 30px;
+  justify-content: space-between;
+}
+.login-logo {
+  height: 75px;
+}
+
+
+/* TITLE CONTAINER */
+.login-title-container {
+  display: flex;
+  width: 100%;
+  padding: 30px 30px;
+  justify-content: center;
+  margin-top: calc(50vh - 135px - 150px);
+}
+
+.login-title-wrapper {
+  display: flex;
+  width: 330px;
+  justify-content: space-between;
+}
+
+.login-title-img {
+  width: 150px;
+  height: 150px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+.login-title-h1 {
+  width: 150px;
+}
+
+h1 {
+  font-size: 55px;
+  color: #FFF;
+  text-align: end;
+}
+
+
+/* BUTTON CONTAINER */
+.login-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.login-button-button {
+  background-color: #F78200;
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: 75px;
+
+  height: 75px;
+  width: 250px;
+  border-radius: 10px;
+
+  transition: background-color .5s;
+}
+.login-button-button:hover {
+  background-color: #965000;
+}
+
+
+/* FOOTER CONTAINER */
+.login-footer-container {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  justify-content: center;
+}
+.login-footer-text {
+  color: #FFF;
+  font-family: 'Jost', sans-serif;
+  font-size: 24px;
+}
+.login-footer-text-p {
+  font-style: italic;
+}
+.login-footer-text-a {
+  font-weight: bold;
+  transition: color .5s;
+}
+.login-footer-text-a:hover{
+  color: #F78200;
+}

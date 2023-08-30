@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cuestionarios-teams-webapp'`, () => {
+  it(`should have as title 'dual-quiz-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cuestionarios-teams-webapp');
+    expect(app.title).toEqual('dual-quiz-app');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('cuestionarios-teams-webapp app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('dual-quiz-app app is running!');
   });
 });

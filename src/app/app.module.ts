@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule } from "@angular/core";
+import { NgModule, isDevMode } from "@angular/core";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http"; // Import
 
 import { MatButtonModule } from "@angular/material/button";
@@ -22,24 +22,22 @@ import {
   InteractionType,
   PublicClientApplication,
 } from "@azure/msal-browser";
+import { LoginComponent } from './login/login.component';
 
-console.log("asu")
 
-const dev = true;
-export const redirectUrl = dev ?
+export const redirectUrl = isDevMode() ?
 "http://localhost:4200" :
 "https://orange-water-0d503ef10.3.azurestaticapps.net";
 
 const isIE =
   window.navigator.userAgent.indexOf("MSIE ") > -1 ||
   window.navigator.userAgent.indexOf("Trident/") > -1;
-
 console.log(window.navigator.userAgent)
 
   // 'https://orange-water-0d503ef10.3.azurestaticapps.net'
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProfileComponent],
+  declarations: [AppComponent, HomeComponent, ProfileComponent, LoginComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -51,7 +49,7 @@ console.log(window.navigator.userAgent)
     MsalModule.forRoot(
       new PublicClientApplication({
         auth: {
-          clientId: "db56d95a-515a-4e76-8e7b-c06eeff1aeec",
+          clientId: "d984f456-db14-4dfb-b314-95df2bed999f",
           authority:
             "https://login.microsoftonline.com/489581cf-0f55-408a-9e44-289b6fb55ea0",
           redirectUri: redirectUrl
