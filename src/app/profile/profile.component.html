@@ -9,7 +9,5 @@
       <p class="card-text">{{ profile.officeLocation }}</p>
     </div>
   </div>
-
+  <button class="btn btn-danger" *ngIf="loginDisplay" (click)="logout()">Logout</button>
 </div>
-
-
