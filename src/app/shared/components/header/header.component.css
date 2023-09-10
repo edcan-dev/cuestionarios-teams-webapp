@@ -1,14 +1,27 @@
-
+* {
+  box-sizing: border-box;
+}
 
 .profile-main-container {
   display: flex;
   /* position: fixed; */
   height: 100px;
-  width: 100vw;
+  width: 100%;
   background-color: #024059;
   padding: 10px 10px;
   justify-content:  space-between;
 }
+
+@media (min-width: 1000px ) {
+
+  .logout-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+}
+
 .profile-main-container > div {
   display: flex;
 }
@@ -26,7 +39,8 @@
   line-height: 80px;
   color: #FFF;
   margin-right: 15px;
-  margin-bottom: 0px !important;
+  margin: 0px !important;
+  margin-right: 10px !important;
 }
 
 
