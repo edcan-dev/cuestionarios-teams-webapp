@@ -10,7 +10,6 @@ import { MatListModule } from "@angular/material/list";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-import { ProfileComponent } from "./profile/profile.component";
 
 import {
   MsalModule,
@@ -23,6 +22,7 @@ import {
   PublicClientApplication,
 } from "@azure/msal-browser";
 import { LoginComponent } from './login/login.component';
+import { ProfileModule } from "./profile/profile.module";
 
 
 export const redirectUrl = isDevMode() ?
@@ -37,8 +37,9 @@ console.log(window.navigator.userAgent)
   // 'https://orange-water-0d503ef10.3.azurestaticapps.net'
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProfileComponent, LoginComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent],
   imports: [
+    ProfileModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

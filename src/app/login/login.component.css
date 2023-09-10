@@ -7,7 +7,7 @@
 .login-main-container {
   position: fixed;
   height: 100vh;
-  background-color: #024059;  
+  background-color: #024059;
 }
 
 .login-logo-container {
@@ -77,6 +77,10 @@ h1 {
 }
 .login-button-button:hover {
   background-color: #965000;
+}
+
+.login-button-button:hover {
+  cursor: pointer;
 }
 
 
