@@ -3,8 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MSAL_GUARD_CONFIG, MsalBroadcastService, MsalGuardConfiguration, MsalService } from '@azure/msal-angular';
 import { InteractionStatus } from '@azure/msal-browser';
 import { Subject, filter, takeUntil } from 'rxjs';
-import { redirectUrl } from '../../app.module';
-import { UserInfo, UserProfilePhoto } from '../interfaces/profile.interfaces';
+
+import { UserInfo, UserProfilePhoto } from '../../interfaces/home.interfaces';
+import { redirectUrl } from 'src/app/config/env.config';
 
 const GRAPH_PROFILE_ENDPOINT = "https://graph.microsoft.com/v1.0/me";
 const GRAPH_PHOTO_ENDPOINT = "https://graph.microsoft.com/v1.0/me/photo";
@@ -25,11 +26,11 @@ addEventListener("popstate", (event) => {
 
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css'],
+  selector: 'home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css'],
 })
-export class ProfileComponent implements OnInit {
+export class HomePageComponent implements OnInit {
   userInfo: UserInfo = {};
 
   profile!: ProfileType;
@@ -125,3 +126,4 @@ export class ProfileComponent implements OnInit {
     this.loginDisplay = this.authService.instance.getAllAccounts().length > 0;
   }
 }
+

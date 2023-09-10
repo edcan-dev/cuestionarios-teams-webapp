@@ -4,21 +4,51 @@
   display: flex;
   /* position: fixed; */
   height: 100px;
-  width: 100%;
+  width: 100vw;
   background-color: #024059;
   padding: 10px 10px;
-  justify-content: space-around;
+  justify-content:  space-between;
+}
+.profile-main-container > div {
+  display: flex;
 }
 .profile-title-img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
 }
 .profile-title-h1 {
+  font-family: 'Secular One', sans-serif;
   height: 80px;
-  font-size: 40px;
+  font-size: 35px;
   list-style: 80px;
   justify-content: center;
   line-height: 80px;
   color: #FFF;
+  margin-right: 15px;
+  margin-bottom: 0px !important;
+}
+
+
+.title-container {
+  display: flex;
+  transition: background-color .2s;
+  padding: 5px;
+  align-items: center;
+}
+.logout-container {
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  color: #FFF;
+  font-size: 50px;
+  padding: 5px;
+
+  transition: background-color .2s;
+}
+.logout-icon:hover {
+  border-radius: 5px;
+  background-color: #022431;
 }

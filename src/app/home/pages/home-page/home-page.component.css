@@ -1,0 +1,13 @@
+main {
+  background-color: #B0D2E0;
+}
+
+.home-layout {
+  margin: 50px 0px;
+  display: grid;
+  width: 100%;
+  height: max-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
+}

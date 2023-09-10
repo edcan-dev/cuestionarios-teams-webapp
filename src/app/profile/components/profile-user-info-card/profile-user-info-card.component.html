@@ -3,9 +3,29 @@
   src="{{ userInfo.photoUrl }}"
   alt="Profile Image"
   class="profile-card-img">
+
   <div class="profile-card-text">
-    <p class="profile-card-name">{{ userInfo.firstName }}</p>
-    <p class="profile-card-name">{{ userInfo.lastName }}</p>
-    <p class="profile-card-mat">{{ userInfo.studentId }}</p>
+
+    <div>
+      <p class="profile-card-name">{{ userInfo.firstName }}</p>
+      <p class="profile-card-name">{{ userInfo.lastName }}</p>
+    </div>
+
+    <div>
+      <p class="profile-card-mat">Matrícula:</p>
+      <p class="profile-card-mat">{{ userInfo.studentId }}</p>
+    </div>
+
+    <div class="profile-card-info">
+      <a
+      href="/"
+      >
+      Detalles
+    </a>
+    </div>
+
   </div>
+
+
+
 </div>
