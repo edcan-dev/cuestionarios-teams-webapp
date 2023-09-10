@@ -7,8 +7,8 @@ root {
   --navy-blue: #173e4d;
 }
 
-.card-pending-quizes {
-  background-color: #F78200;
+.card {
+  background-color: #024059;
   margin: 0 auto;
   width: 70%;
   height: 250px;
@@ -34,7 +34,7 @@ root {
 }
 
 .card-quiz-list-item {
-  background-color: #FFAC50;
+  background-color: #94D6F1;
   height: 30px;
   line-height: 30px;
   padding-left: 5px;

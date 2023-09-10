@@ -3,7 +3,8 @@ import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfigur
 import { InteractionStatus, RedirectRequest } from '@azure/msal-browser';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
-import { redirectUrl } from './app.module';
+import { redirectUrl } from './config/env.config';
+
 
 
 @Component({
