@@ -17,6 +17,7 @@
     <a *ngIf="loginDisplay"
       class="login-button-button"
       [routerLink]="['profile']"
+      style="cursor: pointer;"
     >Profile</a>
 
     <a *ngIf="!loginDisplay"
@@ -27,7 +28,7 @@
 
   <footer class="login-footer-container">
     <p class="login-footer-text login-footer-text-p">by&nbsp;</p>
-    <a 
+    <a
     class="login-footer-text login-footer-text-a"
     href="https://www.linkedin.com/in/edcan-dev/"
     target="_BLANK"

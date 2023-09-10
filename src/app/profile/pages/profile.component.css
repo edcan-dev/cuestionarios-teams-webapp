@@ -1,0 +1,74 @@
+* {
+  font-family: 'Secular One', sans-serif;
+}
+
+.profile-main-container {
+  display: flex;
+  /* position: fixed; */
+  height: 100px;
+  width: 100%;
+  background-color: #024059;
+  padding: 10px 10px;
+  justify-content: space-around;
+}
+.profile-title-img {
+  width: 80px;
+  height: 80px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+.profile-title-h1 {
+  height: 80px;
+  font-size: 40px;
+  list-style: 80px;
+  justify-content: center;
+  line-height: 80px;
+  color: #FFF;
+}
+
+.profile-card {
+  background-color: #85D3D9;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 80%;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.profile-card-img {
+  padding: 10px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.profile-card-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+.profile-card-name {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.profile-card-mat {
+  font-size: 24px;
+  text-align: center;
+}
+
+
+/*   PendingQuizesComponent    */
+
+.profile-card-pending-quizes {
+  background-color: #F78200 ;
+}
+
+.profile-card-text-pending-quizes {
+  color: #FFF;
+  font-weight: 300 !important;
+
+}

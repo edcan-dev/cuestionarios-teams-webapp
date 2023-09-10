@@ -1,0 +1,24 @@
+
+
+.profile-main-container {
+  display: flex;
+  /* position: fixed; */
+  height: 100px;
+  width: 100%;
+  background-color: #024059;
+  padding: 10px 10px;
+  justify-content: space-around;
+}
+.profile-title-img {
+  width: 80px;
+  height: 80px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+.profile-title-h1 {
+  height: 80px;
+  font-size: 40px;
+  list-style: 80px;
+  justify-content: center;
+  line-height: 80px;
+  color: #FFF;
+}

@@ -27,12 +27,8 @@
 
     <button class="btn btn-danger" *ngIf="loginDisplay" (click)="logout()">Logout</button>
   </div>
-  
+
 </nav>-->
-
-
-
-
 
   <!--This is to avoid reload during acquireTokenSilent() because of hidden iframe -->
   <router-outlet *ngIf="!isIframe"></router-outlet>

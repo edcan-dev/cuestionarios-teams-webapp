@@ -1,0 +1,43 @@
+* {
+  font-family: 'Secular One', sans-serif;
+}
+
+root {
+  --light-blue: #85D3D9;
+  --navy-blue: #173e4d;
+}
+
+.profile-card {
+  background-color: #024059;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 80%;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.profile-card-img {
+  padding: 10px;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.profile-card-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.profile-card-name {
+  font-size: 36px;
+  text-align: center;
+}
+
+.profile-card-mat {
+  font-size: 24px;
+  text-align: center;
+}

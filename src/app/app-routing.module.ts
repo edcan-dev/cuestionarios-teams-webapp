@@ -1,10 +1,11 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { ProfileComponent } from "./profile/profile.component";
+
 import { MsalGuard } from "@azure/msal-angular";
 import { BrowserUtils } from "@azure/msal-browser";
 import { LoginComponent } from "./login/login.component";
+import { ProfileComponent } from "./profile/pages/profile.component";
 
 const routes: Routes = [
   {
