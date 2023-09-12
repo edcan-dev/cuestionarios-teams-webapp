@@ -20,8 +20,7 @@ main {
   .home-layout {
     width: 100%;
     margin: 0px !important;
-    padding: 50px;
-
+    padding: 50px 200px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }

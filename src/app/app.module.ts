@@ -21,8 +21,8 @@ import { redirectUrl } from "./config/env.config";
 const isIE =
   window.navigator.userAgent.indexOf("MSIE ") > -1 ||
   window.navigator.userAgent.indexOf("Trident/") > -1;
-console.log(window.navigator.userAgent)
-
+/* console.log(window.navigator.userAgent)
+ */
   // 'https://orange-water-0d503ef10.3.azurestaticapps.net'
 
 @NgModule({
