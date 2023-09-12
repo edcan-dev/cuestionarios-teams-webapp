@@ -13,3 +13,11 @@ export interface UserProfilePhoto {
   height: number;
   width: number;
 }
+
+export interface ProfileType {
+  givenName?: string,
+  surname?: string,
+  userPrincipalName?: string,
+  id?: string,
+  officeLocation?: string
+};

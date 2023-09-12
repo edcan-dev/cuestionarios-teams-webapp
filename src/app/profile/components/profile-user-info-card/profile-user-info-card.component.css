@@ -101,6 +101,34 @@ root {
     margin: 0 !important;
     width: 100%;
     height: 35vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-card-img {
+    width: 100%;
+    height: 50%;
   }
 
+  .profile-card-text {
+
+  }
+
+  .profile-card-name-container {
+    display: flex;
+  }
+  .profile-card-mat-container {
+    display: flex;
+  }
+  .profile-card-mat {
+    font-size:30px;
+    margin: 0px 20px 0px 0px !important;
+  }
+  .profile-card-name {
+    font-size:30px;
+    margin: 0px 20px 0px 0px !important;
+  }
+
+  .profile-card-mat {
+    font-size: 24px;
+  }
 }
