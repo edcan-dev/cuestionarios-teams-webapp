@@ -9,8 +9,8 @@ const routes: Routes = [
   {
     path: "home",
     component: HomePageComponent,
-    canActivate: [MsalGuard],
-  },
+/*     canActivate: [MsalGuard],
+ */  },
   {
     path: "**",
     redirectTo: '/home'
