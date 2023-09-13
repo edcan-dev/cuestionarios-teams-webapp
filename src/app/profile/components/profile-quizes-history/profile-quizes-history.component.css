@@ -7,6 +7,7 @@ root {
   --navy-blue: #173e4d;
 }
 
+
 .card {
   background-color: #F78200;
   margin: 0 auto;
@@ -15,6 +16,11 @@ root {
   border-radius: 15px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
   overflow-y: scroll;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  background: rgba(241, 142, 31, 0.75);
+  box-shadow: 3px 7px 16px 0px rgba(241, 142, 31, 0.10), -3px -7px 16px 0px rgba(241, 142, 31, 0.10);
 }
 
 .card-title {

@@ -1,5 +1,5 @@
 main {
-  background-color: #B0D2E0;
+  background-color: #024059 ;
 }
 
 .home-layout {
@@ -29,15 +29,15 @@ main {
     grid-area: 1 / 1 / 2 / 5;
   }
 
-  .profile-pending-quizes {
+  .second-component {
     grid-area: 1 / 5 / 2 / 13;
   }
 
-  .profile-my-groups {
+  .third-component {
     grid-area: 2 / 1 / 3 / 7;
   }
 
-  .profile-quizes-history {
+  .fourth-component {
     grid-area: 2 / 7 / 3 / 13;
   }
 

@@ -16,3 +16,18 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* CUSTOM STYLES */
+
+.bg-green-blue {
+  background-color: #024059 !important;
+}
+.bg-green-blue-dark {
+  background-color: #002A3C !important;
+}
+.font-color-white {
+  color: #FFF;
+}
+.png-color-white {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}

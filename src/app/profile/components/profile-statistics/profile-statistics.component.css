@@ -7,7 +7,8 @@ root {
   --navy-blue: #173e4d;
 }
 
-.card-pending-quizes {
+
+.card {
   background-color: #F78200;
   margin: 0 auto;
   width: 70%;
@@ -25,16 +26,17 @@ root {
 .card-title {
   width: 100%;
   text-align: center;
-  margin: 10px 0px;
+  margin-top: 10px;
   color: #FFF;
   font-family: 'Jost';
   font-size: 1.5em;
   font-weight: bold;
   height: max-content;
+  padding: 10px;
 }
 
 .card-quiz-list {
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .card-quiz-list-item {
@@ -45,17 +47,28 @@ root {
   margin-bottom: 20px;
   border-radius: 5px;
   transition:  background-color .2s;
-
 }
 .card-quiz-list-item:hover {
   background-color: #bb772a;
 }
 
+.btn-create-quiz {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all .2s;
+  margin: 0px 0px 20px 0px ;
+}
+.btn-create-quiz:hover {
+  background-color: #ffffff !important;
+  color: #173e4d;
+}
+
 @media (min-width: 1000px ) {
-  .card-pending-quizes {
-    height: 35vh;
+  .card {
     margin: 0 !important;
     width: 100%;
+    height: 35vh;
   }
-
 }
+

@@ -3,6 +3,7 @@ export interface UserInfo {
   lastName?: string;
   studentId?: string;
   photoUrl?: string;
+  role?: Role
 }
 
 export interface UserProfilePhoto {
@@ -13,3 +14,5 @@ export interface UserProfilePhoto {
   height: number;
   width: number;
 }
+
+export type Role = 'STUDENT' | 'TEACHER';

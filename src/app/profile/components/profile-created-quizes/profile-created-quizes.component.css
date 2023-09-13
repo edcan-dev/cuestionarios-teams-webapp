@@ -7,14 +7,13 @@ root {
   --navy-blue: #173e4d;
 }
 
-.card-pending-quizes {
+.card-created-quizes {
   background-color: #F78200;
   margin: 0 auto;
   width: 70%;
   height: 250px;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-  overflow-y: scroll;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.40);
@@ -34,7 +33,9 @@ root {
 }
 
 .card-quiz-list {
+  height: 55%;
   padding: 10px;
+  overflow-y: scroll;
 }
 
 .card-quiz-list-item {
@@ -51,11 +52,27 @@ root {
   background-color: #bb772a;
 }
 
+.btn-create-quiz {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all .2s;
+  margin: 10px;
+}
+.btn-create-quiz:hover {
+  background-color: #ffffff !important;
+  color: #173e4d;
+}
+
 @media (min-width: 1000px ) {
-  .card-pending-quizes {
+  .card-created-quizes {
     height: 35vh;
     margin: 0 !important;
     width: 100%;
+  }
+
+  .card-quiz-list {
+    height: 65%;
   }
 
 }

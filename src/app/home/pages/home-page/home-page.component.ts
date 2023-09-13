@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, isDevMode } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {
   MSAL_GUARD_CONFIG,
@@ -9,8 +9,8 @@ import {
 import { InteractionStatus } from '@azure/msal-browser';
 import { Subject, filter, takeUntil } from 'rxjs';
 
-import { UserInfo } from '../../interfaces/home.interfaces';
-import { redirectUrl } from 'src/app/config/env.config';
+import { Role, UserInfo } from '../../interfaces/home.interfaces';
+import { getTeacherRole, redirectUrl } from 'src/app/config/env.config';
 import { GraphApiService } from '../../../shared/services/graph-api-service.service';
 import { ProfileType } from 'src/app/profile/interfaces/profile.interfaces';
 
@@ -25,8 +25,9 @@ const GRAPH_PHOTO_ENDPOINT_ =
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements OnInit {
-  userInfo: UserInfo = {};
-  profile: ProfileType = {};
+  public userInfo: UserInfo = {};
+  private profile: ProfileType = {};
+  public userLayout: string[] = [];
   loginDisplay = false;
   private readonly _destroying$ = new Subject<void>();
 
@@ -36,11 +37,11 @@ export class HomePageComponent implements OnInit {
     private authService: MsalService,
     private http: HttpClient,
     private graphApiService: GraphApiService
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
     this.setUserInfo();
+    this.setUserLayout();
     this.broadcastService.inProgress$
       .pipe(
         filter(
@@ -53,24 +54,34 @@ export class HomePageComponent implements OnInit {
       });
   }
 
-  async setUserInfo() {
+  private async setUserInfo(): Promise<void> {
     const url = await this.graphApiService.getProfilePhotoUrl();
     this.graphApiService
       .getProfileInfo()
-      .subscribe(async ({ givenName, surname, officeLocation }) => {
-        const _firstName = givenName!.split(' ')[0];
-        const _lastName = surname!.split(' ')[0];
+      .subscribe(({ givenName, surname, officeLocation, jobTitle }) => {
+        let userRole: Role =
+          jobTitle!.includes('Estudiante') || jobTitle! === 'Estudiante'
+            ? 'STUDENT'
+            : 'TEACHER';
         this.userInfo = {
-          firstName: _firstName!,
-          lastName: _lastName!,
+          firstName: givenName!.split(' ')[0]!,
+          lastName: surname!.split(' ')[0]!,
           studentId: officeLocation,
-          photoUrl: url
+          photoUrl: url,
+          role: isDevMode() ? getTeacherRole(officeLocation!) : userRole
         };
       });
   }
 
+  private setUserLayout(): void {
+    if(this.userInfo.role === 'STUDENT') {
+      this.userLayout = ['Cuestionarios Pendientes', 'Mis Grupos', 'Historal de Cuestionarios']
+    } else {
+      this.userLayout = ['Cuestionarios Creados','Mis Grupos y Alumnos','Estadísticas']
+    }
+  }
 
-  logout() {
+  logout(): void{
     // Add log out function here
     this.authService.logoutRedirect({
       postLogoutRedirectUri: redirectUrl,
