@@ -19,5 +19,6 @@ export interface ProfileType {
   surname?: string,
   userPrincipalName?: string,
   id?: string,
+  jobTitle?: string
   officeLocation?: string
 };

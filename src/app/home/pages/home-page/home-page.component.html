@@ -1,33 +1,61 @@
 <main>
-  <shared-header>
-  </shared-header>
-
+  <shared-header> </shared-header>
 
   <section class="home-layout">
+    <profile-user-info-card
+      [userInfo]="userInfo"
+      class="profile-user-info-card"
+    ></profile-user-info-card>
 
-    <profile-user-info-card [userInfo]="userInfo"
-    class="profile-user-info-card"></profile-user-info-card>
+    <div class="second-component"
+      [ngSwitch]="userInfo.role">
 
-    <profile-pending-quizes
-    class="profile-pending-quizes"
-    ></profile-pending-quizes>
+      <ng-template [ngSwitchCase]="'STUDENT'">
+        <profile-pending-quizes class="second-component"></profile-pending-quizes>
+      </ng-template>
 
-    <profile-my-groups
-    class="profile-my-groups"
-    >
-    </profile-my-groups>
+      <ng-template [ngSwitchCase]="'TEACHER'">
+        <profile-created-quizes class="second-component">
+        </profile-created-quizes>
+      </ng-template>
+    </div>
 
-    <profile-quizes-history
-      class="profile-quizes-history"
-    >
-    </profile-quizes-history>
+    <div class="third-component"
+      [ngSwitch]="userInfo.role">
+
+      <ng-template [ngSwitchCase]="'STUDENT'">
+        <profile-my-groups class="second-component"></profile-my-groups>
+      </ng-template>
+
+      <ng-template [ngSwitchCase]="'TEACHER'">
+        <profile-my-groups-and-students class="second-component">
+        </profile-my-groups-and-students>
+      </ng-template>
+    </div>
+
+    <div class="fourth-component"
+      [ngSwitch]="userInfo.role">
+
+      <ng-template [ngSwitchCase]="'STUDENT'">
+        <profile-quizes-history class="profile-quizes-history"></profile-quizes-history>
+      </ng-template>
+
+      <ng-template [ngSwitchCase]="'TEACHER'">
+        <profile-statistics></profile-statistics>
+      </ng-template>
+    </div>
+
+
   </section>
 
   <footer>
-    <small>Este es un footer</small><br>
-    <small><a href="https://github.com/edcan-dev/dual-quiz-app">Sobre este proyecto...</a></small>
+    <small>Este es un footer</small><br />
+    <small
+      ><a href="https://github.com/edcan-dev/dual-quiz-app"
+        >Sobre este proyecto...</a
+      ></small
+    >
   </footer>
-
 
   <!--
 
