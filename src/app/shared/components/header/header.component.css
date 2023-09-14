@@ -29,7 +29,12 @@
   width: 60px;
   height: 60px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+  transition: filter .2s;
 }
+.profile-title-imghover {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(13deg) brightness(103%) contrast(103%);
+}
+
 .profile-title-h1 {
   font-family: 'Secular One', sans-serif;
   height: 80px;
@@ -41,6 +46,12 @@
   margin-right: 15px;
   margin: 0px !important;
   margin-right: 10px !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s;
+}
+.profile-title-h1:hover {
+  color: #94e1ff;
 }
 
 
@@ -63,6 +74,18 @@
   transition: background-color .2s;
 }
 .logout-icon:hover {
+  border-radius: 5px;
+  background-color: #022431;
+  cursor: pointer;
+}
+.home-icon {
+  color: #FFF;
+  font-size: 50px;
+  padding: 5px;
+  margin-right: 20px;
+  transition: background-color .2s;
+}
+.home-icon:hover {
   border-radius: 5px;
   background-color: #022431;
 }
