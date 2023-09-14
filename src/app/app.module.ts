@@ -17,6 +17,8 @@ import {
 } from "@azure/msal-browser";
 import { HomeModule } from "./home/home.module";
 import { redirectUrl } from "./config/env.config";
+import { CommonModule } from "@angular/common";
+import { LoginModule } from "./login/login.module";
 
 const isIE =
   window.navigator.userAgent.indexOf("MSIE ") > -1 ||
@@ -28,6 +30,8 @@ const isIE =
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CommonModule,
+    LoginModule,
     HomeModule,
     BrowserModule,
     BrowserAnimationsModule,
