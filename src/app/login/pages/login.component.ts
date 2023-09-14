@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.authService.instance.getAllAccounts()[0].name);
-
     if(this.isLogged()) {
-      window.location.href = '/home'
-      return;
+      window.location.href = 'home'
+    } else {
+      this.login();
+      window.location.href = 'home'
     }
 
     this.msalBroadcastService.msalSubject$

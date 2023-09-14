@@ -1,10 +1,12 @@
-import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+/* import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfiguration } from '@azure/msal-angular';
 import { InteractionStatus, RedirectRequest } from '@azure/msal-browser';
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { redirectUrl } from './config/env.config';
+*/
 
+import { Component } from "@angular/core";
 
 
 @Component({
@@ -12,7 +14,8 @@ import { redirectUrl } from './config/env.config';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent {
+  /*
   title = 'msal-angular-tutorial';
   isIframe = false;
   loginDisplay = false;
@@ -54,4 +57,5 @@ export class AppComponent implements OnInit, OnDestroy {
     this._destroying$.next(undefined);
     this._destroying$.complete();
   }
+*/
 }
