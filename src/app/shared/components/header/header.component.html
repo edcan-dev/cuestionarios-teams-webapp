@@ -2,15 +2,20 @@
   <div
   class="title-container"
   >
-    <h1 class="profile-title-h1">Dual Quiz</h1>
+    <a class="profile-title-h1" [routerLink]="['/home']">Dual Quiz</a>
     <img class="profile-title-img" src="../../assets/images/logos/dualquiz-logo-white.png" alt="">
   </div>
 
   <div
     class="logout-container"
   >
+    <!-- <i
+      class="fa-solid fa-home home-icon"
+    ></i> -->
     <i
-      class="fa-solid fa-home logout-icon"
+      class="fa fa-sign-out logout-icon"
+      aria-hidden="true"
+      (click)="logout()"
     ></i>
   </div>
 </section>
