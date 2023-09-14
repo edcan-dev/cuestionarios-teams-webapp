@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MsalBroadcastService, MsalService, MsalGuard, MsalGuardConfiguration, MSAL_GUARD_CONFIG } from '@azure/msal-angular';
 import { EventMessage, EventType, InteractionStatus, RedirectRequest } from '@azure/msal-browser';
 import { filter } from 'rxjs/operators';
+import { redirectUrl } from 'src/app/config/env.config';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +10,23 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginDisplay = false;
+  loginDisplay: boolean = false;
 
   constructor(
     private authService: MsalService,
     private msalBroadcastService: MsalBroadcastService,
-    @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration  
+    @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration
   ) { }
 
   ngOnInit(): void {
+
+    console.log(this.authService.instance.getAllAccounts()[0].name);
+
+    if(this.isLogged()) {
+      window.location.href = '/home'
+      return;
+    }
+
     this.msalBroadcastService.msalSubject$
       .pipe(
         filter((msg: EventMessage) => msg.eventType === EventType.LOGIN_SUCCESS),
@@ -41,6 +50,10 @@ export class LoginComponent implements OnInit {
     } else {
       this.authService.loginRedirect();
     }
+  }
+
+  isLogged(): boolean {
+    return this.authService.instance.getAllAccounts().length > 0;
   }
 
   setLoginDisplay() {
